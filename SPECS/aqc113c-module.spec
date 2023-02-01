@@ -6,7 +6,7 @@
 %define module_dir extra
 %endif
 
-Summary: %{vendor_name} %{driver_name} device drivers
+Summary: %{vendor_name} %{driver_name} aQuantia AQtion Driver for the aQuantia Multi-Gigabit PCI Express Family of Ethernet Adapters
 Name: %{driver_name}-module
 Version: 2.5.5
 Release: 2%{?dist}
@@ -14,7 +14,6 @@ License: GPL
 
 #Source taken from https://www.marvell.com/content/dam/marvell/en/drivers/Marvell_Linux_2.4.11.zip
 Source0: %{driver_name}-%{version}.tar.gz
-
 
 BuildRequires: gcc
 BuildRequires: kernel-devel
