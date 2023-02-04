@@ -1,13 +1,13 @@
 %define vendor_name Marvell
 %define vendor_label marvell
-%define driver_name aqc113c
+%define driver_name atlantic
 
 %if %undefined module_dir
-%define module_dir extra
+%define module_dir updates
 %endif
 
 Summary: %{vendor_name} %{driver_name} aQuantia AQtion Driver for the aQuantia Multi-Gigabit PCI Express Family of Ethernet Adapters
-Name: %{driver_name}-module
+Name: %{driver_name}-module-alt
 Version: 2.5.5
 Release: 2%{?dist}
 License: GPL
@@ -17,7 +17,7 @@ Source0: %{driver_name}-%{version}.tar.gz
 
 BuildRequires: gcc
 BuildRequires: kernel-devel
-Provides: %{driver_name}-module
+Provides: %{driver_name}-module-alt
 Requires: kernel-uname-r = %{kernel_version}
 Requires(post): /usr/sbin/depmod
 Requires(postun): /usr/sbin/depmod
@@ -56,5 +56,8 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 /lib/modules/%{kernel_version}/*/*.ko
 
 %changelog
+* Thu Feb 04 2023 s-master - 2.5.5
+- renaming to atlantic-module-alt to be compliant with the kernel module policy of XCP-ng
+
 * Thu Feb 02 2023 s-master - 2.5.5
 - Re-packing for XCP-ng of Marvell AQC113C driver
