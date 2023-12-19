@@ -13,3 +13,12 @@ The driver within this package is compatible with Ethernet adapters based on the
 - AQC-111
 - AQC-112
 - AQC-113
+
+
+Discussion about this driver can be found here
+https://xcp-ng.org/forum/topic/6910/marvell-aqc113cs-10gb-network-adapter-driver-on-proart-x570-creator-wifi
+
+And on Andrew's XCP-NG Page you'll find a cleaner created rpm package
+https://users.ntplx.net/~andrew/xcp/
+
+As of today my driver-package is working properly on a production system of myself without any errors.
